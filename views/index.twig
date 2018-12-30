@@ -1,8 +1,101 @@
 {% extends 'layout.twig' %}
 
-{% block body %}
-  <h1>{{title}}</h1>
-  <p>Welcome to {{title}}</p>
+{% block content %}
 
-  <h2>Wenn Mau reis isst, ist das dann Maurice?</h2>
+  <section id="welcome">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="aspect">
+            <i class="fa fa-subway fa-4x"></i>
+
+            <h3>Einzigartige Mauschinerie</h3>
+
+            <p>Wir sind eine atemberaubende Mauschinerie an Reisbällchen, Opfern, Gingern und Waschbärem, wenn du weißt, was ich meine.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="aspect">
+            <i class="fa fa-church fa-4x"></i>
+
+            <h3>Witze, Humor und Community</h3>
+
+            <p>Alles was irgendwie unustig ist konsolidiert sich in den Untiefen der Geister der Mauschine Crew.</p>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-12">
+          <div class="aspect">
+            <i class="fa fa-university fa-4x"></i>
+
+            <h3>Elitäre Gesellschaft</h3>
+
+            <p>Joa, wir sind schon krass. Bewirb dich unter jobs@mauschine.de wenn du auch krass sein willst. Wir treffen uns
+            jeden Tag im Mausoelum und kämpfen für eine mauigere Welt.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="who-we-are">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 col-12">
+
+          <img src="/images/mauer.webp" alt="Zayuri Mauer">
+
+        </div>
+
+        <div class="col-md-8 col-12">
+
+          <h2>Mautastische Community</h2>
+
+          <p>Mauldreist. Maulfaul. Mauserig. Unsere Community ist keinswegs mausetot. Schon seit knapp nach dem Mauerfall
+          sammeln sich täglich neue Heerscharen und werden zu Mauerläufern, die die Mauschine dabei unterstützen, Mautprellern
+          Maulschellen zu verpassen.</p>
+
+          <p>Wir haben uns der Mauifizierung der Welt verschrieben, bitte hilf uns dabei!</p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="best-jokes">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-12">
+
+          <h2>Die besten Witze</h2>
+
+          <p>Nur die Mauschine kann euch mit den besten schlechten Witzen des Mauversums versorgen. Gegen eine Maut
+            kannst du sogar unsere Premium Witze kaufen Kappa Kappa Kappa.</p>
+
+          <p>Wir sammeln Witze, Redewendungen und alles, was mit Mau zutun hat. Hilf uns dabei und werde exklusives
+          Premium Mauglied.</p>
+
+        </div>
+
+        <div class="col-md-4 col-12">
+
+          <img src="/images/zayuDerp2.webp" alt="Zayuri Derp">
+
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  {% include 'component/join.twig' %}
+
 {% endblock %}

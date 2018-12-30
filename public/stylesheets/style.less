@@ -1,10 +1,175 @@
+// Import variables
+@import url('vars');
+
+// Import google fonts
 @import url('https://fonts.googleapis.com/css?family=Charm|Roboto');
 
-header {
-  height: 480px;
-  background: url("/images/background.jpg") no-repeat;
+// Import bootstrap grid
+@import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap-grid.min.css');
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: @font-roboto;
+
+  a {
+    text-decoration: none;
+    color: @color-gray;
+  }
 }
 
-h2 {
-  font-family: 'Charm', sans-serif;
+header {
+
+  background-color: @color-smoke;
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 100%;
+
+    .navbar-brand {
+
+      display: flex;
+    }
+
+    .navbar-nav {
+
+      margin-left: auto;
+      display: flex;
+
+      ul {
+        list-style: none;
+
+        li {
+
+          font-size: 1.4rem;
+          cursor: pointer;
+
+          &:hover {
+
+            background-color: @color-smoke;
+            transition: 0.4s;
+          }
+
+          display: inline-block;
+
+          a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+
+  padding: 60px 0;
+  background-color: @color-mystery-dark;
+  color: @color-smoke;
+
+  .footer-widgets {
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: block;
+
+        a {
+          color: white;
+        }
+      }
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+
+  .footer-copyright {
+    margin: 60px 0 0;
+    text-align: center;
+  }
+}
+
+section {
+  padding: 60px 0;
+}
+
+#welcome {
+
+  background-color: @color-white;
+
+  h1 {
+    text-align: center;
+  }
+
+  .aspect {
+
+    padding: 22px;
+    text-align: center;
+
+    p {
+      text-align: justify;
+    }
+  }
+}
+
+#best-jokes {
+
+  img {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+  }
+
+}
+
+#who-we-are {
+
+  background-color: @color-smoke;
+
+  img {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+#join-crew {
+
+  background: url("/images/meeting2.webp") fixed no-repeat;
+  height: 400px;
+  background-size: cover;
+
+  background-color: white;
+
+  .join-banner {
+    position: relative;
+    padding: 8px 12px;
+    margin: 120px 0;
+    left: 50%;
+    color: @color-smoke;
+    display: inline-block;
+    transform: translateX(-50%);
+
+    background-color: @color-blue;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    h2, p {
+      padding: 0;
+      margin: 0;
+    }
+  }
 }
