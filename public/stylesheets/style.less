@@ -1,9 +1,7 @@
 // Import variables
 @import url('vars');
-
 // Import google fonts
 @import url('https://fonts.googleapis.com/css?family=Charm|Roboto');
-
 // Import bootstrap grid
 @import url('https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap-grid.min.css');
 
@@ -16,6 +14,10 @@ body {
   a {
     text-decoration: none;
     color: @color-gray;
+  }
+
+  .emote {
+    max-height: 20px;
   }
 }
 
@@ -171,5 +173,34 @@ section {
       padding: 0;
       margin: 0;
     }
+  }
+}
+
+#intro-joke {
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: justify;
+  }
+
+  p:first-child:first-letter {
+    float: left;
+    font-size: 60px;
+    line-height: 40px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+}
+
+#maustreiber {
+
+  background-color: @color-smoke;
+
+  img {
+    max-width: 350px;
   }
 }
