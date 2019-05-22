@@ -1,32 +1,40 @@
-# We want to use the latest node version
-FROM node:latest as build
+##################
+### Base Image ###
+##################
+FROM node:latest
 
-# Maintainer
-MAINTAINER Felix Klauke <info@felix-felix.de>
+##################
+### Maintainer ###
+##################
+MAINTAINER Felix Klauke <info@felix-klauke.de>
 
-# Workdir
-WORKDIR /opt/app
+#########################
+### Working Directroy ###
+#########################
+WORKDIR /usr/src/app
 
-# Copy package.json only
-COPY package.json /opt/app
+#############################
+### Copy dependency files ###
+#############################
+COPY package*.json ./
 
-# Install dependencies
-RUN npm install
+#############
+### Build ###
+#############
+RUN npm ci --only=production && \
+    npm run build
 
-# Copy files
-COPY app.js /opt/app
-COPY public /opt/app/public
-COPY routes /opt/app/routes
-COPY views /opt/app/views
-COPY bin /opt/app/bin
+#########################
+### Copy source files ###
+#########################
+COPY . .
 
-# Build step
-RUN npm run build
-
-# We want to allow HTTP traffic only
+##################################
+### Expose Port for web server ###
+##################################
 EXPOSE 3000
 
-# Start command
+#####################
+### Start the app ###
+#####################
 CMD [ "npm", "start" ]
-
-
