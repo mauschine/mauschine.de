@@ -21,13 +21,17 @@ COPY package*.json ./
 #############
 ### Build ###
 #############
-RUN npm ci --only=production && \
-    npm run build
+RUN npm ci --only=production
 
 #########################
 ### Copy source files ###
 #########################
 COPY . .
+
+#############
+### Build ###
+#############
+RUN npm run build
 
 ##################################
 ### Expose Port for web server ###
